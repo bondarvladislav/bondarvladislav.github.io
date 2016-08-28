@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Path finding</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet'
+    href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,600'
+    type='text/css'>
+
+</head>
+<body>
+
+<div class="page-wrapper">
+
+ <div class="content-wrapper">
+
+   <header id="header">
+     <p class="text" id="first-step">Type an integer number between 3 and 15</p>
+     <p class="text" id="second-step">Type the sparseness of matrix in %</p>
+     <p class="text" id="third-step">Use 'GO' button to find the way!</p>
+   </header>
+
+   <div class="input">
+     <input type="number" id="first-input" value="1">
+     <input type="number" id="second-input" value="80">
+     <input type="number" id="third-input" value="1">
+
+     <button id="first-button" class="main-btns"
+             onclick="drawMatrix()">Next</button>
+     <button id="second-button" class="main-btns"
+             onclick="fillNumbers()">Next</button>
+     <button id="third-button" class="main-btns"
+             onclick="findWay()">G O !</button>
+   </div>
+
+   <div id="outer">
+
+   </div>
+
+ </div>
+
+</div>
+
+<div id="openModal" class="modalDialog">
+
+  <div>
+    <h2>Incorrect input!</h2>
+    <p>Try another value</p>
+  </div>
+
+</div>
+
+<div id="errorModal" class="modalDialog">
+
+    <div>
+        <h2>There are no way!</h2>
+        <p>Reload page to try again</p>
+    </div>
+
+</div>
+
+<div id="successModal" class="modalDialog">
+
+    <div>
+        <h2>Way found successfully!</h2>
+        <p>Reload page to try again</p>
+    </div>
+
+</div>
+
+<script src="matrixAppearCntrl.js"></script>
+<script src="numbersFillingCntrl.js"></script>
+<script src="pathFindingCntrl.js"></script>
+
+</body>
+</html>
